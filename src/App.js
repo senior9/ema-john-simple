@@ -3,7 +3,7 @@ import Header from "./components/Header/Header";
 import Shop from "./components/Shop/Shop";
 // import App from "./App";
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route,HashRouter } from "react-router-dom";
 import Order from "./components/Order/Order";
 import Inventory from "./components/Inventory/Inventory";
 import NotFound from "./components/NotFound/NotFound";
@@ -14,6 +14,7 @@ function App() {
   return (
     <div>
       <Header></Header>
+<HashRouter>
       <Router>
         <Routes>
           <Route exact path="/" element={<Shop/>}/> 
@@ -28,6 +29,7 @@ function App() {
 
         </Routes>
       </Router>
+</HashRouter>
     </div>
   );
 }
